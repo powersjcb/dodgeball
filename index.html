@@ -16,12 +16,11 @@
 
       var canvas = document.getElementById('game-canvas');
 
-      canvas.width = Asteroids.Game.DIM_X;
-      canvas.height = Asteroids.Game.DIM_Y;
+      canvas.width = 600;
+      canvas.height = 600;
 
-      var ctx = canvas.getContext('2d');
-      var game = new Asteroids.Game();
-      new Asteroids.GameView(game, ctx).start();
+      game = new Asteroids.Game();
+      view = new Asteroids.GameView(game, canvas).start();
     })();
     </script>
   </body>
