@@ -19,10 +19,17 @@
     </div>
 
     <div class="game stopselect">
-      <canvas id="game-canvas"></canvas>
-      <div class="game-over-modal hidden">
-        <div class="game-over" >Game over!</div>
-        <div id="play-again">
+      <canvas id="game-canvas" class="over"></canvas>
+
+      <div id="game-start-modal" class="game-start-modal">
+        <div id="lets-play" class="play-game">
+          Lets play!
+        </div>
+      </div>
+
+      <div id="game-over-modal" class="game-over-modal hidden">
+        <div class="game-over" >Good try!</div>
+        <div id="play-again" class="play-game">
           Play again?
         </div>
       </div>
@@ -41,12 +48,12 @@
       ( function () {
 
       var canvas = document.getElementById('game-canvas');
-
       game = new Asteroids.Game();
+
       canvas.width = game.DIM_X;
       canvas.height = game.DIM_Y;
 
-      view = new Asteroids.GameView(game, canvas).start();
+      view = new Asteroids.GameView(game, canvas).setupGame();
     })();
     </script>
   </body>

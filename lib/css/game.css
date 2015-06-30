@@ -13,6 +13,10 @@ canvas {
   cursor: none;
 }
 
+canvas.over {
+  cursor: auto;
+}
+
 .game-over-modal {
   background-color: rgba(0,0,0, .8);
   border-radius: 5px;
@@ -28,6 +32,21 @@ canvas {
   right: 20%;
 }
 
+.game-start-modal {
+  background-color: rgba(0,0,0, .8);
+  border-radius: 5px;
+  color: white;
+  font-size: 2rem;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  top: 40%;
+  bottom: 47%;
+  left: 35%;
+  right: 35%;
+}
+
 .game-over {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -37,9 +56,10 @@ canvas {
   cursor: default;
 }
 
-#play-again {
+.play-game {
   background-color: green;
   display: inline-block;
+  margin-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 5px;
@@ -48,11 +68,11 @@ canvas {
   border-bottom: 2px solid rgb(11, 80, 10);
 }
 
-#play-again:hover {
+.play-game:hover {
   cursor: pointer;
 }
 
-#play-again:active {
+.play-game:active {
   border-top: 0px;
   border-bottom: 2px solid green;
 }
@@ -69,5 +89,5 @@ canvas {
 }
 
 .hidden {
-  display: none !important; 
+  display: none !important;
 }
