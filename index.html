@@ -7,53 +7,58 @@
     <header>
       <h1>Dodgeball</h1>
     </header>
+    <div class="container">
+      <div class="score">
+        <span>Lives:</span>
+        <span id="lives"></span>
+      </div>
 
-    <div class="score">
-      <span>Lives:</span>
-      <span id="lives"></span>
-    </div>
+      <div class="score">
+        <span>Score:</span>
+        <span id=score></span>
+      </div>
 
-    <div class="score">
-      <span>Score:</span>
-      <span id=score></span>
-    </div>
+      <div class="game stopselect">
+        <canvas id="game-canvas" class="over"></canvas>
 
-    <div class="game stopselect">
-      <canvas id="game-canvas" class="over"></canvas>
+        <div id="game-start-modal" class="game-start-modal">
+          <div id="lets-play" class="play-game">
+            Lets play!
+          </div>
+        </div>
 
-      <div id="game-start-modal" class="game-start-modal">
-        <div id="lets-play" class="play-game">
-          Lets play!
+        <div id="game-over-modal" class="game-over-modal hidden">
+          <div class="game-over" >Good try!</div>
+          <div id="play-again" class="play-game">
+            Play again?
+          </div>
         </div>
       </div>
 
-      <div id="game-over-modal" class="game-over-modal hidden">
-        <div class="game-over" >Good try!</div>
-        <div id="play-again" class="play-game">
-          Play again?
-        </div>
+      <div class="instructions">
+        <p>Move using your cusor, dodge the balls for as long as you can.  You get three lives. </p>
+        <div>Blue: shielded</div>
+        <div>Green: vunerable</div>
       </div>
     </div>
-
-
 
     <script src="vendor/javascript/jquery-2.1.4.min.js"></script>
     <script src="lib/javascript/utils.js"></script>
     <script src="lib/javascript/movingObject.js"></script>
-    <script src="lib/javascript/asteroid.js"></script>
-    <script src="lib/javascript/ship.js"></script>
+    <script src="lib/javascript/ball.js"></script>
+    <script src="lib/javascript/player.js"></script>
     <script src="lib/javascript/game.js"></script>
     <script src="lib/javascript/gameView.js"></script>
     <script>
       ( function () {
 
       var canvas = document.getElementById('game-canvas');
-      game = new Asteroids.Game();
+      game = new Dodgeball.Game();
 
       canvas.width = game.DIM_X;
       canvas.height = game.DIM_Y;
 
-      view = new Asteroids.GameView(game, canvas).setupGame();
+      view = new Dodgeball.GameView(game, canvas).setupGame();
     })();
     </script>
   </body>

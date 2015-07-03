@@ -1,10 +1,11 @@
-.game {
+body {
+  margin: 0;
+}
+
+.container {
   position: relative;
-  border: 1px solid black;
-  display: inline-block;
-  box-sizing: border-box;
   margin: 0 auto;
-  padding: 0;
+  text-align: center;
 }
 
 canvas {
@@ -15,6 +16,15 @@ canvas {
 
 canvas.over {
   cursor: auto;
+}
+
+.game {
+  position: relative;
+  border: 1px solid black;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .game-over-modal {
@@ -56,6 +66,16 @@ canvas.over {
   cursor: default;
 }
 
+h1 {
+  text-align: center;
+}
+
+.instructions {
+  max-width: 400px;
+  text-align: left;
+  margin: 0 auto;
+}
+
 .play-game {
   background-color: green;
   display: inline-block;
@@ -75,6 +95,10 @@ canvas.over {
 .play-game:active {
   border-top: 0px;
   border-bottom: 2px solid green;
+}
+
+.score {
+  font-size: 2rem;
 }
 
 // utility classes
